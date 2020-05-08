@@ -1,0 +1,20 @@
+/*
+Theme Name: Fancy Lab
+Theme URI:
+Author: inbrackets
+Author URI: 
+Description: Fancy Lap is compatible WooCommerce theme made with WordPress.
+Version: 1.0
+Text-domain: fancy-lab
+License: GNU General Public License v2 or later
+License URI:
+Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options
+*/
+
+.brand {
+    background: green;
+}
+
+.second-column {
+    background: yellow;
+}
