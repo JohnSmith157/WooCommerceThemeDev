@@ -18,3 +18,16 @@ Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, the
 .second-column {
     background: yellow;
 }
+
+.menu-menu ul {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+.main-menu ul li {
+    display: inline;
+    margin: 0 5px 0 0;
+}
