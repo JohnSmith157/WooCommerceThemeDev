@@ -1,0 +1,36 @@
+2020-05-14T19:44:26+00:00 CRITICAL Uncaught Error: Call to undefined function twentyseventeen_unique_id() in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\searchform.php:13
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-includes\general-template.php(258): require()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\header.php(25): get_search_form()
+#2 C:\xampp\htdocs\woocommercethemedev\wp-includes\template.php(723): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\woocommercethemedev\wp-includes\template.php(672): load_template('C:\\xampp\\htdocs...', true)
+#4 C:\xampp\htdocs\woocommercethemedev\wp-includes\general-template.php(41): locate_template(Array, true)
+#5 C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\template-home.php(5): get_header()
+#6 C:\xampp\htdocs\woocommercethemedev\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\woocommercethemedev\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\woocommer in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\searchform.php on line 13
+
+2020-05-14T19:44:54+00:00 CRITICAL Uncaught Error: Call to undefined function twentyseventeen_get_svg() in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\searchform.php:16
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-includes\general-template.php(258): require()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\header.php(25): get_search_form()
+#2 C:\xampp\htdocs\woocommercethemedev\wp-includes\template.php(723): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\woocommercethemedev\wp-includes\template.php(672): load_template('C:\\xampp\\htdocs...', true)
+#4 C:\xampp\htdocs\woocommercethemedev\wp-includes\general-template.php(41): locate_template(Array, true)
+#5 C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\template-home.php(5): get_header()
+#6 C:\xampp\htdocs\woocommercethemedev\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\woocommercethemedev\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\woocommerce in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\searchform.php on line 16
+
+2020-05-14T19:44:57+00:00 CRITICAL Uncaught Error: Call to undefined function twentyseventeen_get_svg() in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\searchform.php:16
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-includes\general-template.php(258): require()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\header.php(25): get_search_form()
+#2 C:\xampp\htdocs\woocommercethemedev\wp-includes\template.php(723): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\woocommercethemedev\wp-includes\template.php(672): load_template('C:\\xampp\\htdocs...', true)
+#4 C:\xampp\htdocs\woocommercethemedev\wp-includes\general-template.php(41): locate_template(Array, true)
+#5 C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\index.php(14): get_header()
+#6 C:\xampp\htdocs\woocommercethemedev\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\woocommercethemedev\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\woocommercethemede in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\searchform.php on line 16
+
