@@ -33,12 +33,44 @@
                         <div class="brand col-md-3 col-12 col-lg-2 te=xt-center text-md-left">Logo</div>
                         <div class="second-column col-md-9 col-12 col-lg-10">
                             <div class="row">
-                                <div class="account col-12">
-                                    <div class="cart text-right">
-                                        <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
-                                        <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                <?php if ( class_exists( 'WooCommerce' ) ) { ?>
+                                    <div class="account col-12">
+                                        <div class="navbar-expand">
+                                            <ul class="navbar-nav float-left">
+                                                <?php if ( is_user_logged_in() ) { ?>
+                                                    <li>
+                                                        <a href="<?php echo esc_url(
+                                                            get_permalink( 
+                                                                get_option( 'woocommerce_myaccount_page_id' ) 
+                                                            )
+                                                        ); ?>" class="nav-link">My Account</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="<?php echo esc_url(
+                                                            wp_logout_url(
+                                                                get_permalink( 
+                                                                    get_option ( 'woocommerce_myaccount_page_id' ) 
+                                                                )
+                                                            )
+                                                        ); ?>" class="nav-link">Logout</a>
+                                                    </li>
+                                                <?php } else { ?>
+                                                    <li>
+                                                        <a href="<?php echo esc_url(
+                                                            get_permalink( 
+                                                                get_option( 'woocommerce_myaccount_page_id' ) 
+                                                            )
+                                                        ); ?>" class="nav-link">Login / Register</a>
+                                                    </li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
+                                        <div class="cart text-right">
+                                            <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
+                                            <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php } ?>
                                 <div class="col-12">
                                     <nav class="main-menu navbar navbar-expand-md navbar-light" role="navigation">
                                         
