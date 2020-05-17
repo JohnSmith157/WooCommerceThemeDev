@@ -17,6 +17,11 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 /**
+ * Call the customizer file
+ */
+require_once get_template_directory() . '/inc/customizer.php';
+
+/**
  * Enqueue scripts and styles
  */
 
