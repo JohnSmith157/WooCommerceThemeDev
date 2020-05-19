@@ -46,7 +46,7 @@ require_once get_template_directory() . '/inc/customizer.php';
     register_nav_menus(
         [
             'fancy_lab_main_menu'       =>  'Fancy Lab Main Menu',
-            'fancy_lab_footer_menu'  =>  'Fanca Lab Footer Menu'
+            'fancy_lab_footer_menu'     =>  'Fanca Lab Footer Menu'
         ]
     );
 

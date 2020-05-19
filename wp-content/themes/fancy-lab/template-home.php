@@ -10,18 +10,51 @@ get_header();
             <!-- Place somewhere in the <body> of your page -->
             <div class="flexslider">
                 <ul class="slides">
-                    <li>
-                    <img src="slide1.jpg" />
-                    </li>
-                    <li>
-                    <img src="slide2.jpg" />
-                    </li>
-                    <li>
-                    <img src="slide3.jpg" />
-                    </li>
-                    <li>
-                    <img src="slide4.jpg" />
-                    </li>
+                    <?php
+                    
+                    for( $i = 1; $i < 4; $i++ ) {
+                        $slider_page[ $i ]                = get_theme_mod( 'set_slider_page' . $i );
+                        $slider_button_text[ $i ]         = get_theme_mod( 'set_slider_button_text' . $i );
+                        $slider_button_url[ $i ]          = get_theme_mod( 'set_slider_button_url' . $i );
+                    }
+
+                    $args = [
+                        'post_type'         => 'page',
+                        'posts_per_page'    => 3,
+                        'post__in'          => $slider_page,
+                        'orderby'           => 'post__in'
+                    ];
+                    
+                    $slider_loop = new WP_Query( $args );
+                    $j = 1;
+                    if( $slider_loop->have_posts() ) {
+                        while( $slider_loop->have_posts() ) {
+                            $slider_loop->the_post();
+
+                    ?>
+
+                        <li>
+                            <?php the_post_thumbnail( 'fancy-lab-slider', [ 'class' => 'img-fluid' ] ); ?>
+                            <div class="container">
+                                <div class="slider-details-container">
+                                    <div class="slider-title">
+                                        <h1><?php the_title(); ?></h1>
+                                    </div>
+                                    <div class="slider-description">
+                                        <div class="subtitle"><?php the_content(); ?></div>
+                                        <a href="<?php echo $slider_button_url[ $j ]; ?>" class="link"><?php echo $slider_button_text[ $j ]; ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    <?php 
+                            $j++;
+                        }
+                        wp_reset_postdata();
+                    }
+
+                    ?>
                 </ul>
             </div>
         </section>
