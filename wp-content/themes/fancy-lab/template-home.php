@@ -13,9 +13,10 @@ get_header();
                     <?php
                     
                     for( $i = 1; $i < 4; $i++ ) {
-                        $slider_page[ $i ]                = get_theme_mod( 'set_slider_page' . $i );
-                        $slider_button_text[ $i ]         = get_theme_mod( 'set_slider_button_text' . $i );
-                        $slider_button_url[ $i ]          = get_theme_mod( 'set_slider_button_url' . $i );
+                        // Getting data from Customizer to display the Slider section
+                        $slider_page[$i]        = get_theme_mod( 'set_slider_page' . $i );
+                        $slider_button_text[$i] = get_theme_mod( 'set_slider_button_text' . $i );
+                        $slider_button_url[$i]  = get_theme_mod( 'set_slider_button_url' . $i );
                     }
 
                     $args = [
@@ -31,25 +32,25 @@ get_header();
                         while( $slider_loop->have_posts() ) {
                             $slider_loop->the_post();
 
-                    ?>
+                        ?>
 
-                        <li>
-                            <?php the_post_thumbnail( 'fancy-lab-slider', [ 'class' => 'img-fluid' ] ); ?>
-                            <div class="container">
-                                <div class="slider-details-container">
-                                    <div class="slider-title">
-                                        <h1><?php the_title(); ?></h1>
-                                    </div>
-                                    <div class="slider-description">
-                                        <div class="subtitle"><?php the_content(); ?></div>
-                                        <a href="<?php echo $slider_button_url[ $j ]; ?>" class="link"><?php echo $slider_button_text[ $j ]; ?></a>
+                            <li>
+                                <?php the_post_thumbnail( 'fancy-lab-slider', [ 'class' => 'img-fluid' ] ); ?>
+                                <div class="container">
+                                    <div class="slider-details-container">
+                                        <div class="slider-title">
+                                            <h1><?php the_title(); ?></h1>
+                                        </div>
+                                        <div class="slider-description">
+                                            <div class="subtitle"><?php the_content(); ?></div>
+                                            <a href="<?php echo esc_url( $slider_button_url[$j] ); ?>" class="link"><?php echo esc_html( $slider_button_text[$j] ); ?></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                    <?php 
-                            $j++;
+                        <?php 
+                        $j++;
                         }
                         wp_reset_postdata();
                     }

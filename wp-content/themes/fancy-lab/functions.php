@@ -26,19 +26,20 @@ require_once get_template_directory() . '/inc/customizer.php';
  */
 
 // filetime( get_template_directory() . '/style.css' ) for developing the theme
- function fancy_lab_scripts() {
-     // Bootstrap JS and CSS files
-     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/inc/bootstrap.min.js', [ 'jquery' ], '4.4.1', true );
-     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '4.4.1', 'all' );
-     // Theme's main stylesheet
-     wp_enqueue_style( 'fancy-lab-style', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
-     // Google fonts
-     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto&display=swap|https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap' );
+function fancy_lab_scripts() {
+    // Bootstrap JS and CSS files
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/inc/bootstrap.min.js', [ 'jquery' ], '4.4.1', true );
+    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '4.4.1', 'all' );
+    // Theme's main stylesheet
+    wp_enqueue_style( 'fancy-lab-style', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
+    // Google fonts
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto&display=swap|https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap' );
 
-     // Flexslider Javascript and CSS files
-     wp_enqueue_script( 'flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', [ 'jquery' ], '', true );
-     wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', [], '', 'all' );
-     wp_enqueue_script( 'flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/flexslider.js', [ 'jquery' ], '', true );
+    // Flexslider Javascript and CSS files
+    wp_enqueue_script( 'flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', [ 'jquery' ], '', true );
+    wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', [], '', 'all' );
+    wp_enqueue_script( 'flexslider-js', get_template_directory_uri() . '/inc/flexslider/flexslider.js', [ 'jquery' ], '', true );
+
  }
  add_action( 'wp_enqueue_scripts', 'fancy_lab_scripts' );
 
@@ -46,7 +47,7 @@ require_once get_template_directory() . '/inc/customizer.php';
     register_nav_menus(
         [
             'fancy_lab_main_menu'       =>  'Fancy Lab Main Menu',
-            'fancy_lab_footer_menu'     =>  'Fanca Lab Footer Menu'
+            'fancy_lab_footer_menu'     =>  'Fancy Lab Footer Menu'
         ]
     );
 
