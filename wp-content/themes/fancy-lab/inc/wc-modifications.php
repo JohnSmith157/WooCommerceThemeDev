@@ -47,8 +47,9 @@ function fancy_lab_wc_modify() {
         function fancy_lab_close_sidebar_tags() {
             echo '</div>';
         }
-
+         // Also, if we are on a shop page, include the product description
         add_action( 'woocommerce_after_shop_loop_item_title', 'the_excerpt', 1 );
+        
     }
     
 
@@ -66,6 +67,8 @@ function fancy_lab_wc_modify() {
     function fancy_lab_close_shop_tags() {
         echo '</div>';
     }
+
+   
 
 }
 add_action( 'wp', 'fancy_lab_wc_modify' );
