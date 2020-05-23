@@ -62,25 +62,55 @@ get_header();
 
         <section class="popular-products">
             <div class="container">
+                <?php
+                $popular_limit      = get_theme_mod( 'set_popular_max_num', 4 );
+                $popular_col        = get_theme_mod( 'set_popular_max_col', 4 );
+                $arrivals_limit     = get_theme_mod( 'set_new_arrivals_max_num', 4 );
+                $arrivals_col       = get_theme_mod( 'set_new_arrivals_max_col', 4 );
+                ?>
                 <h2>Popular Products</h2>
-                <?php echo do_shortcode( '[products limit="4" columns="4" orderby="popularity"]' ); ?>
+                <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
             </div>
         </section>
 
         <section class="new-arrivals">
             <div class="container">
                 <h2>New Arrivals</h2>
-                <?php echo do_shortcode( '[products limit="4" columns="4" orderby="date"]' ); ?>
+                <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit  . ' " columns=" ' . $arrivals_col  . ' " orderby="date"]' ); ?>
             </div>
         </section>
+        
+        <?php 
+        
+        $showdeal           = get_theme_mod( 'set_deal_show', 0 );
+        $deal               = get_theme_mod( 'set_deal' );
+        $currency           = get_woocommerce_currency_symbol();
+        $regular            = get_theme_mod( $deal, '_regular_price', true );
+        $slider_page        = get_theme_mod( $deal, '_sale_price', true );
+        
+
+        if( $showdeal == 1 && ( !empty( $deal ) ) ) {
+            $discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
+        ?>
 
         <section class="deal-of-the-week">
             <div class="container">
-                <div class="row">
-                    Deal of the Week
+                <h2>Deal of the Week</h2>
+                <div class="row d-flex align-items-center">
+                    <div class="deal-img col-md-6 col-12 ml-auto text-center">
+                        <?php echo get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
+                    </div>
+
+                    <div class="deal-desc col-md-4 col-12 mr-auto textcenter">
+
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <?php
+        }
+        ?>
 
         <section class="lab-blog">
             <div class="container">
