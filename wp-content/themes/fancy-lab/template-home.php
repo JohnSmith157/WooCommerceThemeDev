@@ -60,56 +60,127 @@ get_header();
             </div>
         </section>
 
-        <section class="popular-products">
-            <div class="container">
-                <?php
-                $popular_limit      = get_theme_mod( 'set_popular_max_num', 4 );
-                $popular_col        = get_theme_mod( 'set_popular_max_col', 4 );
-                $arrivals_limit     = get_theme_mod( 'set_new_arrivals_max_num', 4 );
-                $arrivals_col       = get_theme_mod( 'set_new_arrivals_max_col', 4 );
-                ?>
-                <h2>Popular Products</h2>
-                <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
-            </div>
-        </section>
-
-        <section class="new-arrivals">
-            <div class="container">
-                <h2>New Arrivals</h2>
-                <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit  . ' " columns=" ' . $arrivals_col  . ' " orderby="date"]' ); ?>
-            </div>
-        </section>
-        
         <?php 
         
-        $showdeal           = get_theme_mod( 'set_deal_show', 0 );
-        $deal               = get_theme_mod( 'set_deal' );
-        $currency           = get_woocommerce_currency_symbol();
-        $regular            = get_theme_mod( $deal, '_regular_price', true );
-        $slider_page        = get_theme_mod( $deal, '_sale_price', true );
-        
-
-        if( $showdeal == 1 && ( !empty( $deal ) ) ) {
-            $discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
+        if( class_exists( 'WooCommerce' ) ) { 
+            
         ?>
+            <section class="popular-products">
+                <?php
+                    // Display the maximum article number and the column number
+                    $popular_limit              = get_theme_mod( 'set_popular_max_num', 4 );
+                    $popular_col                = get_theme_mod( 'set_popular_max_col', 4 );
+                    $arrivals_limit             = get_theme_mod( 'set_new_arrivals_max_num', 4 );
+                    $arrivals_col               = get_theme_mod( 'set_new_arrivals_max_col', 4 );
 
-        <section class="deal-of-the-week">
-            <div class="container">
-                <h2>Deal of the Week</h2>
-                <div class="row d-flex align-items-center">
-                    <div class="deal-img col-md-6 col-12 ml-auto text-center">
-                        <?php echo get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
-                    </div>
-
-                    <div class="deal-desc col-md-4 col-12 mr-auto textcenter">
-
-                    </div>
+                    // Display customized titles for each section
+                    $popular_title              = get_theme_mod( 'set_popular_title', 'Popular Products' );
+                    $arrival_title              = get_theme_mod( 'set_new_arrivals_title', 'New Arrivals' );
+                    $deal_of_the_week_title     = get_theme_mod( 'set_deal_of_the_week_title', 'Deal of the Week' );
+                ?>
+                <div class="container">                
+                    <h2><?php echo $popular_title; ?></h2>
+                    <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
                 </div>
-            </div>
-        </section>
-        
+            </section>
+
+            <section class="new-arrivals">
+                <div class="container">
+                    <h2><?php echo $arrival_title; ?></h2>
+                    <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit  . ' " columns=" ' . $arrivals_col  . ' " orderby="date"]' ); ?>
+                </div>
+            </section>
+            
+            <?php 
+            
+            $showdeal           = get_theme_mod( 'set_deal_show', 0 );
+            $deal               = get_theme_mod( 'set_deal' );
+            $currency           = get_woocommerce_currency_symbol();
+            $regular            = get_theme_mod( $deal, '_regular_price', true );
+            $slider_page        = get_theme_mod( $deal, '_sale_price', true );
+            
+
+            if( $showdeal == 1 && ( !empty( $deal ) ) ) {
+                // If statement in order to avoid the divided-by-zero error
+                if ( is_numeric ( $sale ) && is_numeric( $regular ) ) {
+                    $discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
+                } else {
+                    $discount_percentage = 0;
+                } // ( $regular - $sale ) != 0 &&
+                
+            ?>
+
+                <section class="deal-of-the-week">
+                    <div class="container">
+                        <h2><?php echo $deal_of_the_week_title; ?></h2>
+                        <div class="row d-flex align-items-center">
+                            <div class="deal-img col-md-6 col-12 ml-auto text-center">
+                                <?php echo get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
+                            </div>
+
+                            <div class="deal-desc col-md-4 col-12 mr-auto textcenter">
+                                <?php 
+
+                                if( !empty( $sale ) ) { 
+                                
+                                ?>
+
+                                    <span class="discount">
+                                        <?php echo $discount_percentage . '% OFF'; ?>
+                                    </span>
+                                        
+                                <?php
+                                }
+                                ?>
+
+                                <h3>
+                                    <a href="<?php echo get_permalink( $deal ); ?>">
+                                        <?php echo get_the_title( $deal ); ?>
+                                    </a>
+                                </h3>
+
+                                <p><?php echo get_the_excerpt( $deal ); ?></p>
+
+                                <div class="prices">
+                                    <span class="regular">
+                                        <?php 
+                                        echo $currency;
+                                        echo $regular;
+                                        ?>
+                                    </span>
+
+                                    <?php
+                                    
+                                    if( !empty( $sale ) ) {
+
+                                    ?>
+                                        <span class="sale">
+                                            <?php 
+                                            echo $currency;
+                                            echo $sale;
+                                            ?>
+                                        </span>
+                                    <?php 
+                                    }
+                                    ?>
+                                </div>
+
+                                <a href="<?php echo esc_url( '?add-to-cart=' . $deal ); ?>" class="add-to-cart">
+                                    Add to Cart    
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <?php 
+            }
+            ?>
+
         <?php
+
         }
+
         ?>
 
         <section class="lab-blog">
