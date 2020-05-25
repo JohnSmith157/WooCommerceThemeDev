@@ -78,15 +78,21 @@ get_header();
                     $arrival_title              = get_theme_mod( 'set_new_arrivals_title', 'New Arrivals' );
                     $deal_of_the_week_title     = get_theme_mod( 'set_deal_of_the_week_title', 'Deal of the Week' );
                 ?>
-                <div class="container">                
-                    <h2><?php echo $popular_title; ?></h2>
+
+                <div class="container">
+                    <div class="section-title">
+                        <h2><?php echo $popular_title; ?></h2>
+                    </div>            
                     <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
                 </div>
+
             </section>
 
             <section class="new-arrivals">
                 <div class="container">
-                    <h2><?php echo $arrival_title; ?></h2>
+                    <div class="section-title">
+                        <h2><?php echo $arrival_title; ?></h2>
+                    </div>
                     <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit  . ' " columns=" ' . $arrivals_col  . ' " orderby="date"]' ); ?>
                 </div>
             </section>
@@ -112,7 +118,10 @@ get_header();
 
                 <section class="deal-of-the-week">
                     <div class="container">
-                        <h2><?php echo $deal_of_the_week_title; ?></h2>
+                        <div class="section-title">
+                            <h2><?php echo $deal_of_the_week_title; ?></h2>
+                        </div>
+                        
                         <div class="row d-flex align-items-center">
                             <div class="deal-img col-md-6 col-12 ml-auto text-center">
                                 <?php echo get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
@@ -185,21 +194,45 @@ get_header();
 
         <section class="lab-blog">
             <div class="container">
+                <div class="section-title">
+                    <h2><?php echo get_theme_mod( 'set_blog_title', 'News From Our Blog' ); ?></h2>
+                </div>
                 <div class="row">
                     <?php
+
+                    $args = [
+                        'post_type'         => 'post',
+                        'posts_per_page'    => 2,
+
+                    ];
+
+                    $blog_posts = new WP_Query( $args );
+
                     // if there are any posts
-                    if ( have_posts() ) {
+                    if ( $blog_posts->have_posts() ) {
                         // Load posts loop
-                        while ( have_posts() ) {
-                            the_post();
+                        while ( $blog_posts->have_posts() ) {
+                            $blog_posts->the_post();
                             ?>
-                                <article>
-                                    <h2><?php the_title(); ?></h2>
-                                    <div><?php the_content(); ?></div>
+                                <article class="col-12 col-md-6">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        
+                                        if( has_post_thumbnail() ) {
+                                            the_post_thumbnail( 'fancy-lab-blog', [ 'class' => 'img-fluid' ] );
+                                        }
+
+                                        ?>
+                                    </a>
+                                    <h3>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </h3>
+                                    <div class="excerpt"><?php the_excerpt(); ?></div>
                                 </article>
                                 <br>
                             <?php
                         }
+                        wp_reset_postdata();
                     } else {
                         ?>
                         <p>Nothing to display.</p>

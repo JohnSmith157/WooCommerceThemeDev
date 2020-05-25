@@ -74,8 +74,11 @@ function fancy_lab_scripts() {
         'flex_height'   =>  true,
         'flex_width'    =>  true,
     ] );
-
+    
+    add_theme_support( 'post-thumbnails' );
     add_image_size( 'fancy-lab-slider', 1920, 800, [ 'center', 'center' ] );
+    add_image_size( 'fancy-lab-blog', 960, 640, [ 'center', 'center' ] );
+
 
     if ( ! isset( $content_width ) ) {
         $content_width = 600;
