@@ -19,22 +19,16 @@ get_header();
         <div class="container">
             <div class="row">
                 <?php
-                // if there are any posts
-                if ( have_posts() ) {
-                    // Load posts loop
-                    while ( have_posts() ) {
-                        the_post();
-                        ?>
-                            <article class="col">
-                                <h1><?php the_title(); ?></h1>
-                                <div><?php the_content(); ?></div>
-                            </article>
-                            <br>
-                        <?php
-                    }
-                } else {
+                
+                // Load posts loop
+                while ( have_posts() ) {
+                    the_post();
                     ?>
-                    <p>Nothing to display.</p>
+                        <article class="col">
+                            <h1><?php the_title(); ?></h1>
+                            <div><?php the_content(); ?></div>
+                        </article>
+                        <br>
                     <?php
                 }
 

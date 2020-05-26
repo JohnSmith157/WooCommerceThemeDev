@@ -45,7 +45,7 @@ get_header();
                                             Categories: <span><?php the_category( ' ' ); ?></span>
                                         <?php } ?>
                                         <br />
-                                        <?php if( has_tags() ) { ?>
+                                        <?php if( has_tag() ) { ?>
                                             Tags: <span><?php the_tags( '', ', ' ); ?></span>
                                         <?php } ?>
                                     </p>

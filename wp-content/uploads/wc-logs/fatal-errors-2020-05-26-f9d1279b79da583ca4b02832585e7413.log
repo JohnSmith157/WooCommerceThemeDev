@@ -1,0 +1,16 @@
+2020-05-26T19:13:33+00:00 CRITICAL Uncaught Error: Call to undefined function has_tags() in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\index.php:48
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\woocommercethemedev\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\index.php on line 48
+
+2020-05-26T19:13:38+00:00 CRITICAL Uncaught Error: Call to undefined function has_tags() in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\index.php:48
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\woocommercethemedev\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\index.php on line 48
+
