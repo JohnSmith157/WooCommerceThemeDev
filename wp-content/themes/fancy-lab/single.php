@@ -45,6 +45,16 @@ get_header();
                         </header>
                         
                         <div class="content">
+                                <?php 
+                                
+                                wp_link_pages(
+                                    [
+                                        'before'        => '<p class="inner-pagination">' . 'Pages',
+                                        'after'         => '</p>'
+                                    ]
+                                    );
+
+                                ?>
                             <?php the_content(); ?>
                         </div>
 
