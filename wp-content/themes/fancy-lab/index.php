@@ -20,8 +20,6 @@ get_header();
             <div class="row">
                 <?php
 
-                the_archive_title( '<h1 class="article-title">', '</h1>' );
-
                 // if there are any posts
                 if ( have_posts() ) {
                     // Load posts loop
