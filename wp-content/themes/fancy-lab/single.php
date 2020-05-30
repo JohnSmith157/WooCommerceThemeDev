@@ -15,18 +15,21 @@ get_header();
     <div id="main">
         <div class="container">
             <div class="row">
-                <?php 
-                
-                while( have_posts() ) {
-                    the_post();
-                    get_template_part( 'template-parts/content', 'single' );
+                <div class="col-lg-9 col-md-8 col-12">
+                    <?php 
+                    
+                    while( have_posts() ) {
+                        the_post();
+                        get_template_part( 'template-parts/content', 'single' );
 
-                    if( comments_open() || get_comments_number() ) {
-                        comments_template();
+                        if( comments_open() || get_comments_number() ) {
+                            comments_template();
+                        }
                     }
-                }
 
-                ?>
+                    ?>
+                </div>
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>

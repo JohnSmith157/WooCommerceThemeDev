@@ -18,28 +18,33 @@ get_header();
         
         <div class="container">
             <div class="row">
-                <?php
-
-                // if there are any posts
-                if ( have_posts() ) {
-                    // Load posts loop
-                    while ( have_posts() ) {
-                        the_post();
-                        
-                        get_template_part( 'template-parts/content' );
-
-                    }
-                    the_posts_pagination( [
-                        'prev_text'     => 'Previous',
-                        'next_text'     => 'Next'
-                    ] );
-                } else {
-                    ?>
-                    <p>Nothing to display.</p>
+                <div class="col-lg-9 col-md-8 col-12">
                     <?php
-                }
 
-                ?>
+                    // if there are any posts
+                    if ( have_posts() ) {
+                        // Load posts loop
+                        while ( have_posts() ) {
+                            the_post();
+                            
+                            get_template_part( 'template-parts/content' );
+
+                        }
+                        the_posts_pagination( [
+                            'prev_text'     => 'Previous',
+                            'next_text'     => 'Next'
+                        ] );
+                    } else {
+                        ?>
+                        <p>Nothing to display.</p>
+                        <?php
+                    }
+
+                    ?>
+                </div>
+
+                <?php get_sidebar(); ?>
+                
             </div>
         </div>
         
