@@ -51,6 +51,10 @@ function fancy_lab_scripts() {
         ]
     );
 
+    $textdomain = 'fancy-lab';
+    load_theme_textdomain( $textdomain, get_stylesheet_directory() . '/languages/' );
+    load_theme_textdomain( $textdomain, get_template_directory() . '/languages/' );
+
     // Add theme support for woocommerce with different features
     add_theme_support( 'woocommerce', [
         'thumbnail_image_width'     =>  255,
