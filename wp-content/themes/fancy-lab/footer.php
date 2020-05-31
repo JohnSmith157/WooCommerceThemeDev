@@ -14,7 +14,24 @@
             <section class="footer-widgets">
                 <div class="container">
                     <div class="row">
-                        Footer Widgets
+                        <?php if( is_active_sidebar( 'fancy-lab-sidebar-footer1' ) ) { ?>
+                            <div class="col-md-4 col-12">
+                                <?php dynamic_sidebar( 'fancy-lab-sidebar-footer1' ); ?>
+                            </div>
+                        <?php } ?>
+                        
+                        <?php if( is_active_sidebar( 'fancy-lab-sidebar-footer2' ) ) { ?>
+                            <div class="col-md-4 col-12">
+                                <?php dynamic_sidebar( 'fancy-lab-sidebar-footer2' ); ?>
+                            </div>
+                        <?php } ?>
+                        
+                        <?php if( is_active_sidebar( 'fancy-lab-sidebar-footer3' ) ) { ?>
+                            <div class="col-md-4 col-12">
+                                <?php dynamic_sidebar( 'fancy-lab-sidebar-footer3' ); ?>
+                            </div>
+                        <?php } ?>
+                        
                     </div>
                 </div>       
             </section>

@@ -130,4 +130,34 @@ function fancy_lab_sidebars() {
         'before_title'  => '<h4 class="widget-title">',
         'after_title'   => '</h4>'
     ] );
+
+    register_sidebar( [
+        'name'          => 'Footer Sidebar 1',
+        'id'            => 'fancy-lab-sidebar-footer1',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>'
+    ] );
+
+    register_sidebar( [
+        'name'          => 'Footer Sidebar 2',
+        'id'            => 'fancy-lab-sidebar-footer2',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>'
+    ] );
+
+    register_sidebar( [
+        'name'          => 'Footer Sidebar 3',
+        'id'            => 'fancy-lab-sidebar-footer3',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>'
+    ] );
 }
