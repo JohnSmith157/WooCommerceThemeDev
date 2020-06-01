@@ -74,9 +74,9 @@ get_header();
                     $arrivals_col               = get_theme_mod( 'set_new_arrivals_max_col', 4 );
 
                     // Display customized titles for each section
-                    $popular_title              = get_theme_mod( 'set_popular_title', 'Popular Products' );
-                    $arrival_title              = get_theme_mod( 'set_new_arrivals_title', 'New Arrivals' );
-                    $deal_of_the_week_title     = get_theme_mod( 'set_deal_of_the_week_title', 'Deal of the Week' );
+                    $popular_title              = get_theme_mod( 'set_popular_title', __( 'Popular Products', 'fancy-lab' ) );
+                    $arrival_title              = get_theme_mod( 'set_new_arrivals_title', __( 'New Arrivals', 'fancy-lab' ) );
+                    $deal_of_the_week_title     = get_theme_mod( 'set_deal_of_the_week_title', __( 'Deal of the Week', 'fancy-lab' ) );
                 ?>
 
                 <div class="container">
@@ -135,7 +135,7 @@ get_header();
                                 ?>
 
                                     <span class="discount">
-                                        <?php echo $discount_percentage . '% OFF'; ?>
+                                        <?php echo $discount_percentage . _e( '% OFF', 'fancy-lab' ); ?>
                                     </span>
                                         
                                 <?php
@@ -175,7 +175,7 @@ get_header();
                                 </div>
 
                                 <a href="<?php echo esc_url( '?add-to-cart=' . $deal ); ?>" class="add-to-cart">
-                                    Add to Cart    
+                                    <?php _e( 'Add to Cart', 'fancy-lab' ); ?>    
                                 </a>
 
                             </div>
@@ -195,7 +195,7 @@ get_header();
         <section class="lab-blog">
             <div class="container">
                 <div class="section-title">
-                    <h2><?php echo get_theme_mod( 'set_blog_title', 'News From Our Blog' ); ?></h2>
+                    <h2><?php echo get_theme_mod( 'set_blog_title', __( 'News From Our Blog', 'fancy-lab' ) ); ?></h2>
                 </div>
                 <div class="row">
                     <?php
@@ -235,7 +235,7 @@ get_header();
                         wp_reset_postdata();
                     } else {
                         ?>
-                        <p>Nothing to display.</p>
+                        <p><?php _e( 'Nothing to display', 'fancy-lab' ); ?>.</p>
                         <?php
                     }
 
