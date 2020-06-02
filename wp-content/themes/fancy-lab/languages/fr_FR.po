@@ -1,0 +1,298 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Fancy Lab v1.0.0\n"
+"POT-Creation-Date: 2020-06-02 19:46+0100\n"
+"PO-Revision-Date: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.3.1\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Page not found"
+msgstr "Page non trouvée"
+
+#: 404.php:19
+msgid "Unfortunately, the page you tried to reach does not exist on this site!"
+msgstr "Malheureusement, la page que vous avez essayé d’atteindre n’existe pas sur ce site!"
+
+#: 404.php:22
+msgid "Take a look at our lastest posts"
+msgstr "Jetez un oeil à nos derniers messages"
+
+#: archive.php:33 index.php:34 search.php:32
+msgid "Previous"
+msgstr "Précédent"
+
+#: archive.php:34 index.php:35 search.php:33
+msgid "Next"
+msgstr "Suivant"
+
+#: archive.php:39 index.php:39 template-home.php:238
+msgid "Nothing to display"
+msgstr "Rien à afficher"
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "Un commentaire sur &ldquo;%s&rdquo;"
+
+#: comments.php:34
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s un commentaire sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Les commentaires sur &ldquo;%2$s&rdquo;"
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: footer.php:43
+msgid "Copyright X - All Rights Reserved"
+msgstr "Droit d’auteur X - Tous droits réservés"
+
+#: functions.php:49
+msgid "Fancy Lab Main Menu"
+msgstr "Menu principal de Fancy Lab"
+
+#: functions.php:50
+msgid "Fancy Lab Footer Menu"
+msgstr "Menu du footer de Fancy Lab"
+
+#: functions.php:119
+msgid "Fancy Lab Main Sidebar"
+msgstr "Menu du sidebar de Fancy Lab"
+
+#: functions.php:121 functions.php:141 functions.php:151 functions.php:161
+msgid "Drag and drop your widgets here"
+msgstr "Attrapez et laissez vos widgets ici"
+
+#: functions.php:129
+msgid "Sidebar Shop"
+msgstr "Sidebar de la boutique"
+
+#: functions.php:131
+msgid "Drag and drop your WooCommerce widgets here"
+msgstr "Attrapez et laissez vos widgets WooCommerce ici"
+
+#: functions.php:139
+msgid "Footer Sidebar 1"
+msgstr "Sidebar de footer 1"
+
+#: functions.php:149
+msgid "Footer Sidebar 2"
+msgstr "Sidebar de footer 2"
+
+#: functions.php:159
+msgid "Footer Sidebar 3"
+msgstr "Sidebar de footer 3"
+
+#: header.php:60
+msgid "My Account"
+msgstr "Mon compte"
+
+#: header.php:69
+msgid "Logout"
+msgstr "Se déconnecter"
+
+#: header.php:77
+msgid "Login / Register"
+msgstr "Se connecter/S'enregistrer"
+
+#: header.php:92
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"
+
+#: inc/class-wp-bootstrap-navwalker.php:365
+msgid "Add a menu"
+msgstr "Ajouter un menu"
+
+#: inc/customizer.php:14
+msgid "Copyright Settings"
+msgstr "Règles du Copyright"
+
+#: inc/customizer.php:15
+msgid "Copyright Section"
+msgstr "Section du Copyright"
+
+#: inc/customizer.php:31
+msgid "Copyright"
+msgstr "Copyright"
+
+#: inc/customizer.php:32
+msgid "Please, add your copyright information here"
+msgstr "S'il vous plaît, ajoutez votre information de copyright ici"
+
+#: inc/customizer.php:42
+msgid "Slider Settings"
+msgstr "Réglages du slider"
+
+#: inc/customizer.php:43
+msgid "Slider Section"
+msgstr "Section du slider"
+
+#: inc/customizer.php:57 inc/customizer.php:58
+msgid "Set slider page 1"
+msgstr "Page 1 du set slider"
+
+#: inc/customizer.php:75 inc/customizer.php:76
+msgid "Button text for page 1"
+msgstr "Texte du bouton pour la page 1"
+
+#: inc/customizer.php:93 inc/customizer.php:94
+msgid "URL for page 1"
+msgstr "URL pour la page 1"
+
+#: inc/customizer.php:111 inc/customizer.php:112
+msgid "Set slider page 2"
+msgstr "Page 2 du set slider"
+
+#: inc/customizer.php:129 inc/customizer.php:130
+msgid "Button text for page 2"
+msgstr "texte du bouton 2 pour la page 2"
+
+#: inc/customizer.php:147 inc/customizer.php:148
+msgid "URL for page 2"
+msgstr "Url pour la page 2"
+
+#: inc/customizer.php:165 inc/customizer.php:166
+msgid "Set slider page 3"
+msgstr "Page 3 du set slider"
+
+#: inc/customizer.php:183 inc/customizer.php:184
+msgid "Button text for page 3"
+msgstr "texte du bouton 3 pour la page 3"
+
+#: inc/customizer.php:201 inc/customizer.php:202
+msgid "URL for page 3"
+msgstr "URL pour la page 3"
+
+#: inc/customizer.php:213
+msgid "Home Page Products and Blog Settings"
+msgstr "Produits de la page d'accueil et réglages du blog"
+
+#: inc/customizer.php:214
+msgid "Home Page Section"
+msgstr "Section de la page d'accueil"
+
+#: inc/customizer.php:228 inc/customizer.php:229
+msgid "Popular Products Max Number"
+msgstr "Nombre max des produits populaires"
+
+#: inc/customizer.php:245 inc/customizer.php:246
+msgid "Popular Products Max Columns"
+msgstr "Colonnes max des produits populaires"
+
+#: inc/customizer.php:263 inc/customizer.php:264
+msgid "Title for popular products"
+msgstr "Titre des produits populaires"
+
+#: inc/customizer.php:281 inc/customizer.php:282
+msgid "New Arrivals Max Number"
+msgstr "Nombre max des nouveaux produits reçus"
+
+#: inc/customizer.php:298 inc/customizer.php:299
+msgid "New Arrivals Max Columns"
+msgstr "Colonnes max des nouveaux produits reçus"
+
+#: inc/customizer.php:316 inc/customizer.php:317
+msgid "Title for New Arrivals"
+msgstr "Titre des nouveaux produits reçus"
+
+#: inc/customizer.php:334
+msgid "Show Deal of the Week?"
+msgstr "Montrez les deals de la semaine?"
+
+#: inc/customizer.php:351
+msgid "Deal of the Week Product ID"
+msgstr "Deal du produit de la semaine ID"
+
+#: inc/customizer.php:352
+msgid "Product ID to Display"
+msgstr "ID du produit à montrer"
+
+#: inc/customizer.php:369 inc/customizer.php:370
+msgid "Title for Deal of the Week Product"
+msgstr "TItre pour le deal du produit de la semaine"
+
+#: search.php:18
+msgid "Search results for"
+msgstr "Les résultats de recherche pour"
+
+#: search.php:37
+msgid "There is no results for your query"
+msgstr "Il n'y a pas de résultats pour votre demande"
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Recherche &hellip;"
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Recherche"
+
+#: template-home.php:77
+msgid "Popular Products"
+msgstr "Produits populaires"
+
+#: template-home.php:78
+msgid "New Arrivals"
+msgstr "Nouveaux produits reçus"
+
+#: template-home.php:79
+msgid "Deal of the Week"
+msgstr "Deal de la semaine"
+
+#: template-home.php:138
+msgid "% OFF"
+msgstr "% de rabais"
+
+#: template-home.php:178
+msgid "Add to Cart"
+msgstr "Ajoutez à votre panier"
+
+#: template-home.php:198
+msgid "News From Our Blog"
+msgstr "Nouvelles de noter blog"
+
+#: template-parts/content-archive.php:25 template-parts/content-search.php:25
+#: template-parts/content-single.php:16 template-parts/content.php:25
+msgid "Published by"
+msgstr "Publié(e) par"
+
+#: template-parts/content-archive.php:25 template-parts/content-search.php:25
+#: template-parts/content-single.php:16 template-parts/content.php:25
+msgid "on"
+msgstr "Sur"
+
+#: template-parts/content-archive.php:28 template-parts/content-search.php:28
+#: template-parts/content-single.php:19 template-parts/content.php:29
+msgid "Categories"
+msgstr "Catégories"
+
+#: template-parts/content-archive.php:32 template-parts/content-search.php:32
+#: template-parts/content-single.php:23 template-parts/content.php:34
+msgid "Tags"
+msgstr "Tags"
+
+#: template-parts/content-single.php:43
+msgid "Pages"
+msgstr "Pages"

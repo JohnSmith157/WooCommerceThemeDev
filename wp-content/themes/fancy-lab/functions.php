@@ -116,7 +116,7 @@ function fancy_lab_woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_action( 'widgets_init', 'fancy_lab_sidebars' );
 function fancy_lab_sidebars() {
     register_sidebar( [
-        'name'          => _( 'Fancy Lab Main Sidebar', 'fancy-lab' ),
+        'name'          => __( 'Fancy Lab Main Sidebar', 'fancy-lab' ),
         'id'            => 'fancy-lab-sidebar-1',
         'description'   => __( 'Drag and drop your widgets here', 'fancy-lab' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
