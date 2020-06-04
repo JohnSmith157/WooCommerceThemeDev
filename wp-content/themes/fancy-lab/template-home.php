@@ -74,16 +74,16 @@ get_header();
                     $arrivals_col               = get_theme_mod( 'set_new_arrivals_max_col', 4 );
 
                     // Display customized titles for each section
-                    $popular_title              = get_theme_mod( 'set_popular_title', __( 'Popular Products', 'fancy-lab' ) );
-                    $arrival_title              = get_theme_mod( 'set_new_arrivals_title', __( 'New Arrivals', 'fancy-lab' ) );
-                    $deal_of_the_week_title     = get_theme_mod( 'set_deal_of_the_week_title', __( 'Deal of the Week', 'fancy-lab' ) );
+                    $popular_title              = esc_html( get_theme_mod( 'set_popular_title', __( 'Popular Products', 'fancy-lab' ) ) );
+                    $arrival_title              = esc_html( get_theme_mod( 'set_new_arrivals_title', __( 'New Arrivals', 'fancy-lab' ) ) );
+                    $deal_of_the_week_title     = esc_html( get_theme_mod( 'set_deal_of_the_week_title', __( 'Deal of the Week', 'fancy-lab' ) ) );
                 ?>
 
                 <div class="container">
                     <div class="section-title">
                         <h2><?php echo $popular_title; ?></h2>
                     </div>            
-                    <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
+                    <?php echo do_shortcode( '[products limit=" ' . esc_attr ( $popular_limit ) . ' " columns=" ' . esc_attr ( $popular_col ) . ' " orderby="popularity"]' ); ?>
                 </div>
 
             </section>
@@ -93,7 +93,7 @@ get_header();
                     <div class="section-title">
                         <h2><?php echo $arrival_title; ?></h2>
                     </div>
-                    <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit  . ' " columns=" ' . $arrivals_col  . ' " orderby="date"]' ); ?>
+                    <?php echo do_shortcode( '[products limit=" ' . esc_attr ( $arrivals_limit )  . ' " columns=" ' . esc_attr ( $arrivals_col )  . ' " orderby="date"]' ); ?>
                 </div>
             </section>
             
@@ -135,7 +135,7 @@ get_header();
                                 ?>
 
                                     <span class="discount">
-                                        <?php echo $discount_percentage . _e( '% OFF', 'fancy-lab' ); ?>
+                                        <?php echo esc_html( $discount_percentage ) . esc_html_e( '% OFF', 'fancy-lab' ); ?>
                                     </span>
                                         
                                 <?php
@@ -143,18 +143,18 @@ get_header();
                                 ?>
 
                                 <h3>
-                                    <a href="<?php echo get_permalink( $deal ); ?>">
-                                        <?php echo get_the_title( $deal ); ?>
+                                    <a href="<?php echo esc_url( get_permalink( $deal ) ); ?>">
+                                        <?php echo esc_html( get_the_title( $deal ) ); ?>
                                     </a>
                                 </h3>
 
-                                <p><?php echo get_the_excerpt( $deal ); ?></p>
+                                <p><?php echo esc_html( get_the_excerpt( $deal ) ); ?></p>
 
                                 <div class="prices">
                                     <span class="regular">
                                         <?php 
-                                        echo $currency;
-                                        echo $regular;
+                                        echo esc_html( $currency );
+                                        echo esc_html( $regular );
                                         ?>
                                     </span>
 
@@ -165,8 +165,8 @@ get_header();
                                     ?>
                                         <span class="sale">
                                             <?php 
-                                            echo $currency;
-                                            echo $sale;
+                                            echo esc_html( $currency );
+                                            echo esc_html( $sale );
                                             ?>
                                         </span>
                                     <?php 
@@ -175,7 +175,7 @@ get_header();
                                 </div>
 
                                 <a href="<?php echo esc_url( '?add-to-cart=' . $deal ); ?>" class="add-to-cart">
-                                    <?php _e( 'Add to Cart', 'fancy-lab' ); ?>    
+                                    <?php esc_html_e( 'Add to Cart', 'fancy-lab' ); ?>    
                                 </a>
 
                             </div>
@@ -195,7 +195,7 @@ get_header();
         <section class="lab-blog">
             <div class="container">
                 <div class="section-title">
-                    <h2><?php echo get_theme_mod( 'set_blog_title', __( 'News From Our Blog', 'fancy-lab' ) ); ?></h2>
+                    <h2><?php echo esc_html( get_theme_mod( 'set_blog_title', __( 'News From Our Blog', 'fancy-lab' ) ) ); ?></h2>
                 </div>
                 <div class="row">
                     <?php
@@ -235,7 +235,7 @@ get_header();
                         wp_reset_postdata();
                     } else {
                         ?>
-                        <p><?php _e( 'Nothing to display', 'fancy-lab' ); ?>.</p>
+                        <p><?php esc_html_e( 'Nothing to display', 'fancy-lab' ); ?>.</p>
                         <?php
                     }
 

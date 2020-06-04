@@ -30,13 +30,13 @@ get_header();
                         }
 
                         the_posts_pagination( [
-                            'prev_text'     => __( 'Previous', 'fancy-lab' ),
-                            'next_text'     => __( 'Next', 'fancy-lab' )
+                            'prev_text'     => esc_html__( 'Previous', 'fancy-lab' ),
+                            'next_text'     => esc_html__( 'Next', 'fancy-lab' )
                         ] );
                         
                     } else {
                         ?>
-                        <p><?php _e( 'Nothing to display', 'fancy-lab' ); ?>.</p>
+                        <p><?php esc_html_e( 'Nothing to display', 'fancy-lab' ); ?>.</p>
                         <?php
                     }
 

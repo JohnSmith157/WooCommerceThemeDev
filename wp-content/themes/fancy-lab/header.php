@@ -31,7 +31,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="brand col-md-3 col-12 col-lg-2 te=xt-center text-md-left">
-                            <a href="<?php echo home_url( '/' ); ?>">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <?php 
                                 if ( has_custom_logo() ) {
                                     the_custom_logo(); 
@@ -57,7 +57,7 @@
                                                             get_permalink( 
                                                                 get_option( 'woocommerce_myaccount_page_id' ) 
                                                             )
-                                                        ); ?>" class="nav-link"><?php _e( 'My Account', 'fancy-lab' ); ?></a>
+                                                        ); ?>" class="nav-link"><?php esc_html_e( 'My Account', 'fancy-lab' ); ?></a>
                                                     </li>
                                                     <li>
                                                         <a href="<?php echo esc_url(
@@ -66,7 +66,7 @@
                                                                     get_option ( 'woocommerce_myaccount_page_id' ) 
                                                                 )
                                                             )
-                                                        ); ?>" class="nav-link"><?php _e( 'Logout', 'fancy-lab' ) ?></a>
+                                                        ); ?>" class="nav-link"><?php esc_html_e( 'Logout', 'fancy-lab' ) ?></a>
                                                     </li>
                                                 <?php } else { ?>
                                                     <li>
@@ -74,14 +74,14 @@
                                                             get_permalink( 
                                                                 get_option( 'woocommerce_myaccount_page_id' ) 
                                                             )
-                                                        ); ?>" class="nav-link"><?php _e( 'Login / Register', 'fancy-lab' ); ?></a>
+                                                        ); ?>" class="nav-link"><?php esc_html_e( 'Login / Register', 'fancy-lab' ); ?></a>
                                                     </li>
                                                 <?php } ?>
                                             </ul>
                                         </div>
                                         <div class="cart text-right">
-                                            <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
-                                            <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                            <a href="<?php echo esc_url( wc_get_cart_url() ); ?>"><span class="cart-icon"></span></a>
+                                            <span class="items"><?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?></span>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -89,7 +89,7 @@
                                     <nav class="main-menu navbar navbar-expand-md navbar-light" role="navigation">
                                         
                                         <!-- Brand and toggle get grouped for better mobile display -->
-                                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php _e( 'Toggle navigation', 'fancy-lab' ); ?>">
+                                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'fancy-lab' ); ?>">
                                             <span class="navbar-toggler-icon"></span>
                                         </button>
                                         
