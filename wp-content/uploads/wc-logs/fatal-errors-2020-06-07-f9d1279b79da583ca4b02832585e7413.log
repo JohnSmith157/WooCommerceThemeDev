@@ -1,0 +1,63 @@
+2020-06-07T09:00:42+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(659): include_once()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(44): activate_plugin('theme-sniffer-d...', 'http://localhos...', false)
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:00:45+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(2255): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(177): plugin_sandbox_scrape('theme-sniffer-d...')
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:00:45+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(2255): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(177): plugin_sandbox_scrape('theme-sniffer-d...')
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:01:16+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(659): include_once()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(44): activate_plugin('theme-sniffer-d...', 'http://localhos...', false)
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:01:18+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(2255): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(177): plugin_sandbox_scrape('theme-sniffer-d...')
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:01:19+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(2255): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(177): plugin_sandbox_scrape('theme-sniffer-d...')
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:18:17+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(659): include_once()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(44): activate_plugin('theme-sniffer-d...', 'http://localhos...', false)
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:18:19+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(2255): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(177): plugin_sandbox_scrape('theme-sniffer-d...')
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+
+2020-06-07T09:18:20+00:00 CRITICAL Uncaught Error: Class 'Theme_Sniffer\Core\Plugin_Factory' not found in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php:58
+Stack trace:
+#0 C:\xampp\htdocs\woocommercethemedev\wp-admin\includes\plugin.php(2255): include()
+#1 C:\xampp\htdocs\woocommercethemedev\wp-admin\plugins.php(177): plugin_sandbox_scrape('theme-sniffer-d...')
+#2 {main}
+  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\plugins\theme-sniffer-development\theme-sniffer.php on line 58
+

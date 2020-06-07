@@ -22,7 +22,7 @@
         ?>
     </div>
     <div class="meta">
-        <p><?php esc_html_e( 'Published by', 'fancy-lab' ); ?> <?php the_author_posts_link(); ?> <?php esc_html_e( 'on', 'fancy-lab' ); ?> <?php echo esc_html ( get_the_date() ); ?>
+        <p><?php esc_html_e( 'Published by', 'fancy-lab' ); ?> <?php the_author_posts_link(); ?> <?php esc_html_e( 'on', 'fancy-lab' ); ?> <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
             <br />
 
             <?php if( has_category() ) { ?>
@@ -35,6 +35,12 @@
             <?php } ?>
         </p>
     </div>
-    <div><?php the_excerpt(); ?></div>
+    <?php if( has_excerpt() ): ?>
+        <div class="content"><?php the_excerpt(); ?></div>
+    <?php elseif( strpos( $post->post_content, '<!--more-->' ) ): ?>
+        <div class="content"><?php the_content( 'More' ); ?></div>
+    <?php else: ?>
+        <div class="content"><?php the_excerpt(); ?></div>
+    <?php endif; ?>
 </article>
 <br>

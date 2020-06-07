@@ -40,6 +40,10 @@ function fancy_lab_scripts() {
     wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', [], '', 'all' );
     wp_enqueue_script( 'flexslider-js', get_template_directory_uri() . '/inc/flexslider/flexslider.js', [ 'jquery' ], '', true );
 
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
  }
  add_action( 'wp_enqueue_scripts', 'fancy_lab_scripts' );
 
@@ -71,6 +75,8 @@ function fancy_lab_scripts() {
     add_theme_support( 'wc-product-gallery-zoom' );
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
+
+    add_theme_support( 'automatic-feed-links' );
 
     add_theme_support( 'custome-logo', [
         'height'        =>  85,
