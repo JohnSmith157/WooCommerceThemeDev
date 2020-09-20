@@ -11,8 +11,8 @@ function fancy_lab_customizer( $wp_customize ) {
     // Copyright Section
     $wp_customize->add_section(
         'sec_copyright', [
-            'title'         =>  _( 'Copyright Settings', 'fancy-lab' ),
-            'description'   =>  _( 'Copyright Section', 'fancy-lab' )
+            'title'         =>  __( 'Copyright Settings', 'fancy-lab' ),
+            'description'   =>  __( 'Copyright Section', 'fancy-lab' )
         ]
     );
 

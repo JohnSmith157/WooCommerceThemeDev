@@ -1,8 +1,0 @@
-2020-05-25T18:48:08+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\template-home.php:31
-Stack trace:
-#0 C:\xampp\htdocs\woocommercethemedev\wp-includes\template-loader.php(106): include()
-#1 C:\xampp\htdocs\woocommercethemedev\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\woocommercethemedev\index.php(17): require('C:\\xampp\\htdocs...')
-#3 {main}
-  thrown in C:\xampp\htdocs\woocommercethemedev\wp-content\themes\fancy-lab\template-home.php on line 31
-
